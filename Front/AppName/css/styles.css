@@ -136,7 +136,7 @@ h1 span {
 header .bar #ppal_nav{
      height: 100%;
      /** En capa de usuario cambiar por display: flex*/
-     display: flex; 
+     display: none;
      align-items: center;
 }
 
