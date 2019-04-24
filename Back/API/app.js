@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 //Traer RUTAS
-var poblado_route = require('./routes/poblado_route');
+var sector_route = require('./routes/poblado_route');
 
 var app = express();
 
@@ -27,7 +27,7 @@ app.use('/users', usersRouter);
 
 // Use ruta
 
-app.use(poblado_route);
+app.use(sector_route);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
