@@ -1,12 +1,12 @@
 'use strict'
 var jwt = require('jsonwebtoken'),
-    admin_payload = require('../models/admin_patriots_payload'),
-    secret = require('../models/secret'),
+    admin_payload = require('../model/admin_payload'),
+    secret = require('../model/secret'),
     auth_controller = () =>{}
 
 auth_controller.authenticate = (req,res,next)=>{
     let rol = req.body.rol
-    console.log(id)
+    //holi
     let payload ={
         pass : admin_payload.pass,
         rol : rol

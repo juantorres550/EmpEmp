@@ -1,6 +1,6 @@
 'use strict'
 
-var sector_controller = require('../Controller/sector_controller'),
+var sector_controller = require('../controller/sector_controller'),
     express = require('express'),
     router = express.Router()
 

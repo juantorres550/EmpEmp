@@ -1,9 +1,9 @@
 'use strict'
 
 var jwt = require('jsonwebtoken'),
-    secret = require('../Model/secret'),
-    admin_payload = require('../Model/admin_payload'),
-    sector_model = require('../Model/sector'),
+    secret = require('../model/secret'),
+    admin_payload = require('../model/admin_payload'),
+    sector_model = require('../model/sector'),
     sector_controller = () => {}
 
     sector_controller.get_all = (req,res,next)=>{
@@ -329,4 +329,4 @@ var jwt = require('jsonwebtoken'),
         })
     }
 
-module.exports = poblado_controller
+module.exports = sector_controller
