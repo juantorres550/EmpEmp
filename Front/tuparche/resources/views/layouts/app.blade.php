@@ -14,33 +14,35 @@
 </head>
 
 <body>
-    <header>
-        <div class="bar">
-            <div class="content">
-                <h1>TÚ<span>PARCHE</span></h1>
-                <nav id="ppal_nav">
-                    @yield('ppal_nav')
-                </nav>
+    <div id="app">
+        <header>
+            <div class="bar">
+                <div class="content">
+                    <h1>TÚ<span>PARCHE</span></h1>
+                    <nav id="ppal_nav">
+                        @yield('ppal_nav')
+                    </nav>
+                </div>
+                <!--.content-->
             </div>
-            <!--.content-->
+            <!--.bar-->
+        </header>
+    
+        <div id="web_cont">
+            <aside>
+                <div class="resp_menu">
+                    <div class="cont"></div>
+                </div>
+    
+                <div class="all_content">
+                    @yield('aside_content')
+                </div>
+            </aside>
+    
+            <main id="map">
+                <!-- Here comes the map -->
+            </main>
         </div>
-        <!--.bar-->
-    </header>
-
-    <div id="web_cont">
-        <aside>
-            <div class="resp_menu">
-                <div class="cont"></div>
-            </div>
-
-            <div class="all_content">
-                @yield('aside_content')
-            </div>
-        </aside>
-
-        <main id="map">
-            <!-- Here comes the map -->
-        </main>
     </div>
 
     <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>

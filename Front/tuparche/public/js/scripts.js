@@ -15,8 +15,15 @@
         const searchInput = document.querySelector("#u_search");
 
         if( searchInput ){
-            searchInput.addEventListener('keydown', function(e){
-                console.log(e);
+            searchInput.addEventListener('keyup', function(e){
+                if ( e.keyCode === 13 ){
+                    Swal.fire({
+                        title: 'Estamos trabajando en ello.',
+                        text: 'La búsqueda estará disponible en la capa de usuario.',
+                        type: 'info',
+                        confirmButtonText: 'Entendido'
+                      });
+                }
             });
         }
 
