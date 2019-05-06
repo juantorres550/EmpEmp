@@ -27,8 +27,6 @@
             });
         }
 
-        console.log(asideMenu);
-
         asideMenu.addEventListener("click", function () {
             this.classList.toggle("active");
             this.parentNode.parentNode.classList.toggle("show");
@@ -135,6 +133,14 @@
                     });
 
                     tempPoly.setMap(map);
+                    tempPoly.addListener('click', e => {
+                        Swal.fire({
+                            title: 'Estamos trabajando en ello.',
+                            text: 'Los filtros específicos estarán disponibles en la capa de usuario.',
+                            type: 'info',
+                            confirmButtonText: 'Entendido'
+                        });
+                    });
                 }
             });
         }
