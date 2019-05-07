@@ -71,28 +71,45 @@
         // Enviamos la petición a la ruta
         xhr.open('GET', '/api/trying', true);
 
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState === 4){
-                if(xhr.status === 200){
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
                     console.log('Obtenidos!');
                     resolve(JSON.parse(xhr.responseText));
                 } else {
-                    reject({error: 'Oops! something gone wrong'})
+                    reject({
+                        error: 'Oops! something gone wrong'
+                    })
                 }
             }
         }
         xhr.send();
-    });    
+    });
 
     const drawInMap = resp => {
         console.log(resp);
     };
 
-    btn.addEventListener('click', function(e) {
+    btn.addEventListener('click', function (e) {
         getApiPoints()
             .then(resp => drawInMap(resp))
             .catch(err => console.log(err));
     });
+
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
     </script>
 </body>
 </html>

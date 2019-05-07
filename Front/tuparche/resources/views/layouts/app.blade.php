@@ -47,7 +47,7 @@
 
     <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjig5TF23impJc_Z628m1YTLx2SOG3WXc&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLjXNu6N00wNfKOMht00HNyHIKqstdMY&callback=initMap"></script>
 </body>
 
 </html>

@@ -146,21 +146,42 @@
         }
     
         const drawInMap = (resp, map) => {
-            drawPolyline(resp.Arte, map, '#8ab0db');
-            drawPolyline(resp.CenEventos, map, '#db8ac0');
-            drawPolyline(resp.Cine, map, '#dadb8a');
-            drawPolyline(resp.Cultura, map, '#968adb');
-            drawPolyline(resp.Literatura, map, '#8adb8a');
-            drawPolyline(resp.Musica, map, '#db8a8a');
+            drawPolyline(resp.arte, map, '#8ab0db');
+            drawPolyline(resp.cen_eventos, map, '#db8ac0');
+            drawPolyline(resp.cine, map, '#dadb8a');
+            drawPolyline(resp.cultura, map, '#968adb');
+            drawPolyline(resp.literatura, map, '#8adb8a');
+            drawPolyline(resp.musica, map, '#db8a8a');
         };
+
+        const setLocation = (map) => {
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    let coords = { 
+                        lat: position.coords.latitude, 
+                        lng: position.coords.longitude 
+                    };
+                    map.setCenter(coords);
+                    map.setZoom(15);
+                    var marker = new google.maps.Marker({
+                        position: coords,
+                        map: map,
+                        title: '¡Tu localización!'
+                    });
+              
+                });
+            }
+        }
 
         let map;
 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 13,
-                center: { lat: 6.258190, lng: -75.573991 }
+                zoom: 14,
+                center: { lat: 6.17397, lng: -75.5809646 }
             });
+
+            setLocation(map);
         }
 
         initMap();
