@@ -8,6 +8,11 @@ use GuzzleHttp\Client;
 
 class ApiController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('onlyajax');
+    }
+
     private function getAuth()
     {
         $client = new Client();

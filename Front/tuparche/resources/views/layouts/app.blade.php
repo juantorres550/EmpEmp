@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>TuParche | @yield('title')</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 </head>
 
 <body>
@@ -18,7 +17,7 @@
         <header>
             <div class="bar">
                 <div class="content">
-                    <h1>TÚ<span>PARCHE</span></h1>
+                    <h1>TU<span>PARCHE</span></h1>
                     <nav id="ppal_nav">
                         @yield('ppal_nav')
                     </nav>
@@ -45,7 +44,6 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLLjXNu6N00wNfKOMht00HNyHIKqstdMY&callback=initMap"></script>
 </body>
